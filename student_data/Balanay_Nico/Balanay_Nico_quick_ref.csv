@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Balanay, Nico"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+K,Potassium,K,-2.92,39.098,"K metal, elemental",KCl,74.551,K⁺ sourced from KCl solution,K⁺(aq) + e⁻ → K(s),1
+I2,Iodine,I₂,0.54,253.809,I⁻ oxidised to I₂; use I₂ MW,I₂(s),253.809,I₂ solid reduced to I⁻; use I₂ MW,I₂(s) + 2e⁻ → 2I⁻(aq),2
+Fe,Iron,Fe,-0.44,55.845,"Fe metal, elemental",FeSO₄,151.908,Fe²⁺ sourced from FeSO₄ solution,Fe²⁺(aq) + 2e⁻ → Fe(s),2
+MnO2,Manganese dioxide,MnO₂,1.23,86.937,Mn²⁺ oxidised to MnO₂; use MnO₂ MW,MnO₂,86.937,MnO₂ solid reduced; use MnO₂ MW,MnO₂(s) + 4H⁺ + 2e⁻ → Mn²⁺(aq) + 2H₂O,2
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+K,MnO2,4.15,Galvanic,2,2,1,165.133,324604.0,1347.1
+K,I2,3.46,Galvanic,2,2,1,332.005,161452.0,558.6
+K,Fe,2.48,Galvanic,2,2,1,230.104,232950.0,577.7
+Fe,MnO2,1.67,Galvanic,2,1,1,142.782,375417.0,626.9
+Fe,I2,0.98,Galvanic,2,1,1,309.654,173105.0,169.6
+I2,MnO2,0.69,Galvanic,2,1,1,340.746,157310.0,108.5
+MnO2,I2,-0.69,Electrolytic,,,,,,
+I2,Fe,-0.98,Electrolytic,,,,,,
+MnO2,Fe,-1.67,Electrolytic,,,,,,
+Fe,K,-2.48,Electrolytic,,,,,,
+I2,K,-3.46,Electrolytic,,,,,,
+MnO2,K,-4.15,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume

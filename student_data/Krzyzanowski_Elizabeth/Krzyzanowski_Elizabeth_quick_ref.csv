@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Krzyzanowski, Elizabeth"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+Li,Lithium,Li,-3.05,6.941,"Li metal, elemental",Li⁺(aq),6.941,Li⁺ sourced from LiPF₆ electrolyte; use Li MW,Li⁺(aq) + e⁻ → Li(s),1
+Fe3,Iron(III) / Iron(II),Fe³⁺/Fe²⁺,0.77,55.845,Fe²⁺ → Fe³⁺ in solution; use Fe MW (no solid anode),FeCl₃,162.204,Fe³⁺ sourced from FeCl₃ solution,Fe³⁺(aq) + e⁻ → Fe²⁺(aq),1
+Ni,Nickel,Ni,-0.25,58.693,"Ni metal, elemental",NiSO₄,154.756,Ni²⁺ sourced from NiSO₄ solution,Ni²⁺(aq) + 2e⁻ → Ni(s),2
+I2,Iodine,I₂,0.54,253.809,I⁻ oxidised to I₂; use I₂ MW,I₂(s),253.809,I₂ solid reduced to I⁻; use I₂ MW,I₂(s) + 2e⁻ → 2I⁻(aq),2
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+Li,Fe3,3.82,Galvanic,1,1,1,169.145,158452.0,605.3
+Li,I2,3.59,Galvanic,2,2,1,267.691,200241.0,718.9
+Li,Ni,2.8,Galvanic,2,2,1,168.638,317857.0,890.0
+Ni,Fe3,1.02,Galvanic,2,1,2,383.101,139918.0,142.7
+Ni,I2,0.79,Galvanic,2,1,1,312.502,171528.0,135.5
+I2,Fe3,0.23,Galvanic,2,1,2,578.217,92704.0,21.3
+Fe3,I2,-0.23,Electrolytic,,,,,,
+I2,Ni,-0.79,Electrolytic,,,,,,
+Fe3,Ni,-1.02,Electrolytic,,,,,,
+Ni,Li,-2.8,Electrolytic,,,,,,
+I2,Li,-3.59,Electrolytic,,,,,,
+Fe3,Li,-3.82,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume

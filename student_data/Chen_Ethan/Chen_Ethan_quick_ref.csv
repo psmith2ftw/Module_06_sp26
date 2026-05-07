@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Chen, Ethan"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+Na,Sodium,Na,-2.71,22.99,"Na metal, elemental",NaCl,58.443,Na⁺ sourced from NaCl solution,Na⁺(aq) + e⁻ → Na(s),1
+Au,Gold,Au,1.5,196.967,"Au metal, elemental",AuCl₃,303.325,Au³⁺ sourced from AuCl₃ solution,Au³⁺(aq) + 3e⁻ → Au(s),3
+Zn,Zinc,Zn,-0.76,65.38,"Zn metal, elemental",ZnCl₂,136.286,Zn²⁺ sourced from ZnCl₂ solution,Zn²⁺(aq) + 2e⁻ → Zn(s),2
+Cu,Copper,Cu,0.34,63.546,"Cu metal, elemental",CuSO₄,159.609,Cu²⁺ sourced from CuSO₄ solution,Cu²⁺(aq) + 2e⁻ → Cu(s),2
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+Na,Au,4.21,Galvanic,3,3,1,372.295,215969.0,909.2
+Na,Cu,3.05,Galvanic,2,2,1,205.589,260728.0,795.2
+Zn,Au,2.26,Galvanic,6,3,2,802.79,200312.0,452.7
+Na,Zn,1.95,Galvanic,2,2,1,182.266,294091.0,573.5
+Cu,Au,1.16,Galvanic,6,3,2,797.288,201694.0,234.0
+Zn,Cu,1.1,Galvanic,2,1,1,224.989,238246.0,262.1
+Cu,Zn,-1.1,Electrolytic,,,,,,
+Au,Cu,-1.16,Electrolytic,,,,,,
+Zn,Na,-1.95,Electrolytic,,,,,,
+Au,Zn,-2.26,Electrolytic,,,,,,
+Cu,Na,-3.05,Electrolytic,,,,,,
+Au,Na,-4.21,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume

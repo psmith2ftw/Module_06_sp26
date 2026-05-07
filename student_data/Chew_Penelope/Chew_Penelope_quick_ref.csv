@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Chew, Penelope"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+Na,Sodium,Na,-2.71,22.99,"Na metal, elemental",NaCl,58.443,Na⁺ sourced from NaCl solution,Na⁺(aq) + e⁻ → Na(s),1
+Cu,Copper,Cu,0.34,63.546,"Cu metal, elemental",CuSO₄,159.609,Cu²⁺ sourced from CuSO₄ solution,Cu²⁺(aq) + 2e⁻ → Cu(s),2
+I2,Iodine,I₂,0.54,253.809,I⁻ oxidised to I₂; use I₂ MW,I₂(s),253.809,I₂ solid reduced to I⁻; use I₂ MW,I₂(s) + 2e⁻ → 2I⁻(aq),2
+Ni,Nickel,Ni,-0.25,58.693,"Ni metal, elemental",NiSO₄,154.756,Ni²⁺ sourced from NiSO₄ solution,Ni²⁺(aq) + 2e⁻ → Ni(s),2
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+Na,I2,3.25,Galvanic,2,2,1,299.789,178802.0,581.1
+Na,Cu,3.05,Galvanic,2,2,1,205.589,260728.0,795.2
+Na,Ni,2.46,Galvanic,2,2,1,200.736,267031.0,656.9
+Ni,I2,0.79,Galvanic,2,1,1,312.502,171528.0,135.5
+Ni,Cu,0.59,Galvanic,2,1,1,218.302,245544.0,144.9
+Cu,I2,0.2,Galvanic,2,1,1,317.355,168905.0,33.8
+I2,Cu,-0.2,Electrolytic,,,,,,
+Cu,Ni,-0.59,Electrolytic,,,,,,
+I2,Ni,-0.79,Electrolytic,,,,,,
+Ni,Na,-2.46,Electrolytic,,,,,,
+Cu,Na,-3.05,Electrolytic,,,,,,
+I2,Na,-3.25,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume

@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Gaither, Landon"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+Li,Lithium,Li,-3.05,6.941,"Li metal, elemental",Li⁺(aq),6.941,Li⁺ sourced from LiPF₆ electrolyte; use Li MW,Li⁺(aq) + e⁻ → Li(s),1
+MnO2,Manganese dioxide,MnO₂,1.23,86.937,Mn²⁺ oxidised to MnO₂; use MnO₂ MW,MnO₂,86.937,MnO₂ solid reduced; use MnO₂ MW,MnO₂(s) + 4H⁺ + 2e⁻ → Mn²⁺(aq) + 2H₂O,2
+Cu,Copper,Cu,0.34,63.546,"Cu metal, elemental",CuSO₄,159.609,Cu²⁺ sourced from CuSO₄ solution,Cu²⁺(aq) + 2e⁻ → Cu(s),2
+Sn,Tin,Sn,-0.14,118.71,"Sn metal, elemental",SnCl₂,189.616,Sn²⁺ sourced from SnCl₂ solution,Sn²⁺(aq) + 2e⁻ → Sn(s),2
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+Li,MnO2,4.28,Galvanic,2,2,1,100.819,531673.0,2275.6
+Li,Cu,3.39,Galvanic,2,2,1,173.491,308966.0,1047.4
+Li,Sn,2.91,Galvanic,2,2,1,203.498,263407.0,766.5
+Sn,MnO2,1.37,Galvanic,2,1,1,205.647,260654.0,357.1
+Cu,MnO2,0.89,Galvanic,2,1,1,150.483,356205.0,317.0
+Sn,Cu,0.48,Galvanic,2,1,1,278.319,192595.0,92.4
+Cu,Sn,-0.48,Electrolytic,,,,,,
+MnO2,Cu,-0.89,Electrolytic,,,,,,
+MnO2,Sn,-1.37,Electrolytic,,,,,,
+Sn,Li,-2.91,Electrolytic,,,,,,
+Cu,Li,-3.39,Electrolytic,,,,,,
+MnO2,Li,-4.28,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume

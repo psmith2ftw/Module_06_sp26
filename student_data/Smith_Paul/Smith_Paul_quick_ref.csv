@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Smith, Paul"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+Mg,Magnesium,Mg,-2.37,24.305,"Mg metal, elemental",MgSO₄,120.366,Mg²⁺ sourced from MgSO₄ solution,Mg²⁺(aq) + 2e⁻ → Mg(s),2
+Cu,Copper,Cu,0.34,63.546,"Cu metal, elemental",CuSO₄,159.609,Cu²⁺ sourced from CuSO₄ solution,Cu²⁺(aq) + 2e⁻ → Cu(s),2
+Au,Gold,Au,1.5,196.967,"Au metal, elemental",AuCl₃,303.325,Au³⁺ sourced from AuCl₃ solution,Au³⁺(aq) + 3e⁻ → Au(s),3
+Ni,Nickel,Ni,-0.25,58.693,"Ni metal, elemental",NiSO₄,154.756,Ni²⁺ sourced from NiSO₄ solution,Ni²⁺(aq) + 2e⁻ → Ni(s),2
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+Mg,Au,3.87,Galvanic,6,3,2,679.565,236634.0,915.8
+Mg,Cu,2.71,Galvanic,2,1,1,183.914,291456.0,789.8
+Mg,Ni,2.12,Galvanic,2,1,1,179.061,299355.0,634.6
+Ni,Au,1.75,Galvanic,6,3,2,782.729,205446.0,359.5
+Cu,Au,1.16,Galvanic,6,3,2,797.288,201694.0,234.0
+Ni,Cu,0.59,Galvanic,2,1,1,218.302,245544.0,144.9
+Cu,Ni,-0.59,Electrolytic,,,,,,
+Au,Cu,-1.16,Electrolytic,,,,,,
+Au,Ni,-1.75,Electrolytic,,,,,,
+Ni,Mg,-2.12,Electrolytic,,,,,,
+Cu,Mg,-2.71,Electrolytic,,,,,,
+Au,Mg,-3.87,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume

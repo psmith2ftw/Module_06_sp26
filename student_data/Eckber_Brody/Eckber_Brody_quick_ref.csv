@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Eckber, Brody"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+K,Potassium,K,-2.92,39.098,"K metal, elemental",KCl,74.551,K⁺ sourced from KCl solution,K⁺(aq) + e⁻ → K(s),1
+Zn,Zinc,Zn,-0.76,65.38,"Zn metal, elemental",ZnCl₂,136.286,Zn²⁺ sourced from ZnCl₂ solution,Zn²⁺(aq) + 2e⁻ → Zn(s),2
+Au,Gold,Au,1.5,196.967,"Au metal, elemental",AuCl₃,303.325,Au³⁺ sourced from AuCl₃ solution,Au³⁺(aq) + 3e⁻ → Au(s),3
+Sn,Tin,Sn,-0.14,118.71,"Sn metal, elemental",SnCl₂,189.616,Sn²⁺ sourced from SnCl₂ solution,Sn²⁺(aq) + 2e⁻ → Sn(s),2
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+K,Au,4.42,Galvanic,3,3,1,420.619,191157.0,844.9
+K,Sn,2.78,Galvanic,2,2,1,267.812,200151.0,556.4
+Zn,Au,2.26,Galvanic,6,3,2,802.79,200312.0,452.7
+K,Zn,2.16,Galvanic,2,2,1,214.482,249917.0,539.8
+Sn,Au,1.64,Galvanic,6,3,2,962.78,167025.0,273.9
+Zn,Sn,0.62,Galvanic,2,1,1,254.996,210210.0,130.3
+Sn,Zn,-0.62,Electrolytic,,,,,,
+Au,Sn,-1.64,Electrolytic,,,,,,
+Zn,K,-2.16,Electrolytic,,,,,,
+Au,Zn,-2.26,Electrolytic,,,,,,
+Sn,K,-2.78,Electrolytic,,,,,,
+Au,K,-4.42,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume

@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Obanu, Zoe"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+Na,Sodium,Na,-2.71,22.99,"Na metal, elemental",NaCl,58.443,Na⁺ sourced from NaCl solution,Na⁺(aq) + e⁻ → Na(s),1
+MnO2,Manganese dioxide,MnO₂,1.23,86.937,Mn²⁺ oxidised to MnO₂; use MnO₂ MW,MnO₂,86.937,MnO₂ solid reduced; use MnO₂ MW,MnO₂(s) + 4H⁺ + 2e⁻ → Mn²⁺(aq) + 2H₂O,2
+Sn,Tin,Sn,-0.14,118.71,"Sn metal, elemental",SnCl₂,189.616,Sn²⁺ sourced from SnCl₂ solution,Sn²⁺(aq) + 2e⁻ → Sn(s),2
+Ag,Silver,Ag,0.8,107.868,"Ag metal, elemental",AgNO₃,169.872,Ag⁺ sourced from AgNO₃ solution,Ag⁺(aq) + e⁻ → Ag(s),1
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+Na,MnO2,3.94,Galvanic,2,2,1,132.917,403280.0,1588.9
+Na,Ag,3.51,Galvanic,1,1,1,192.862,138967.0,487.8
+Na,Sn,2.57,Galvanic,2,2,1,235.596,227520.0,584.7
+Sn,MnO2,1.37,Galvanic,2,1,1,205.647,260654.0,357.1
+Sn,Ag,0.94,Galvanic,2,1,2,458.454,116921.0,109.9
+Ag,MnO2,0.43,Galvanic,2,2,1,302.673,177098.0,76.2
+MnO2,Ag,-0.43,Electrolytic,,,,,,
+Ag,Sn,-0.94,Electrolytic,,,,,,
+MnO2,Sn,-1.37,Electrolytic,,,,,,
+Sn,Na,-2.57,Electrolytic,,,,,,
+Ag,Na,-3.51,Electrolytic,,,,,,
+MnO2,Na,-3.94,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume

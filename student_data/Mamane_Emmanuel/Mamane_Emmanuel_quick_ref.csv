@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Mamane, Emmanuel"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+K,Potassium,K,-2.92,39.098,"K metal, elemental",KCl,74.551,K⁺ sourced from KCl solution,K⁺(aq) + e⁻ → K(s),1
+Ag,Silver,Ag,0.8,107.868,"Ag metal, elemental",AgNO₃,169.872,Ag⁺ sourced from AgNO₃ solution,Ag⁺(aq) + e⁻ → Ag(s),1
+Zn,Zinc,Zn,-0.76,65.38,"Zn metal, elemental",ZnCl₂,136.286,Zn²⁺ sourced from ZnCl₂ solution,Zn²⁺(aq) + 2e⁻ → Zn(s),2
+Fe3,Iron(III) / Iron(II),Fe³⁺/Fe²⁺,0.77,55.845,Fe²⁺ → Fe³⁺ in solution; use Fe MW (no solid anode),FeCl₃,162.204,Fe³⁺ sourced from FeCl₃ solution,Fe³⁺(aq) + e⁻ → Fe²⁺(aq),1
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+K,Ag,3.72,Galvanic,1,1,1,208.97,128255.0,477.1
+K,Fe3,3.69,Galvanic,1,1,1,201.302,133140.0,491.3
+K,Zn,2.16,Galvanic,2,2,1,214.482,249917.0,539.8
+Zn,Ag,1.56,Galvanic,2,1,2,405.124,132312.0,206.4
+Zn,Fe3,1.53,Galvanic,2,1,2,389.788,137518.0,210.4
+Fe3,Ag,0.03,Galvanic,1,1,1,225.717,118739.0,3.6
+Ag,Fe3,-0.03,Electrolytic,,,,,,
+Fe3,Zn,-1.53,Electrolytic,,,,,,
+Ag,Zn,-1.56,Electrolytic,,,,,,
+Zn,K,-2.16,Electrolytic,,,,,,
+Fe3,K,-3.69,Electrolytic,,,,,,
+Ag,K,-3.72,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume

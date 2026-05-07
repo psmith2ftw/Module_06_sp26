@@ -1,0 +1,31 @@
+# Battery Design Quick Reference
+# Student:,"Chen, Ashley"
+# Generated:,2026-05-06 21:52
+
+# MATERIALS
+Code,Element_Name,Symbol,E_standard_V,Element_MW_g_per_mol,Use_as_ANODE,Compound_Formula,Compound_MW_g_per_mol,Use_as_CATHODE,Half_Reaction_reduction,n_electrons
+Li,Lithium,Li,-3.05,6.941,"Li metal, elemental",Li⁺(aq),6.941,Li⁺ sourced from LiPF₆ electrolyte; use Li MW,Li⁺(aq) + e⁻ → Li(s),1
+Fe,Iron,Fe,-0.44,55.845,"Fe metal, elemental",FeSO₄,151.908,Fe²⁺ sourced from FeSO₄ solution,Fe²⁺(aq) + 2e⁻ → Fe(s),2
+Ag,Silver,Ag,0.8,107.868,"Ag metal, elemental",AgNO₃,169.872,Ag⁺ sourced from AgNO₃ solution,Ag⁺(aq) + e⁻ → Ag(s),1
+Pb,Lead,Pb,-0.13,207.2,"Pb metal, elemental",Pb(NO₃)₂,331.208,Pb²⁺ sourced from Pb(NO₃)₂ solution,Pb²⁺(aq) + 2e⁻ → Pb(s),2
+
+# ALL 12 CELL COMBINATIONS
+Anode,Cathode,E_cell_V,Cell_Type,n_electrons,Anode_coeff,Cathode_coeff,Active_mass_g_per_mol,Capacity_mAh_per_kg,Energy_density_Wh_per_kg
+Li,Ag,3.85,Galvanic,1,1,1,176.813,151580.0,583.6
+Li,Pb,2.92,Galvanic,2,2,1,345.09,155330.0,453.6
+Li,Fe,2.61,Galvanic,2,2,1,165.79,323317.0,843.9
+Fe,Ag,1.24,Galvanic,2,1,2,395.589,135501.0,168.0
+Pb,Ag,0.93,Galvanic,2,1,2,546.944,98004.0,91.1
+Fe,Pb,0.31,Galvanic,2,1,1,387.053,138490.0,42.9
+Pb,Fe,-0.31,Electrolytic,,,,,,
+Ag,Pb,-0.93,Electrolytic,,,,,,
+Ag,Fe,-1.24,Electrolytic,,,,,,
+Fe,Li,-2.61,Electrolytic,,,,,,
+Pb,Li,-2.92,Electrolytic,,,,,,
+Ag,Li,-3.85,Electrolytic,,,,,,
+
+# APPLICATIONS
+Application,Target_Voltage_V,Current_mA,Runtime_h,Capacity_req_mAh,Optimization
+Medical Pacemaker,2.8,0.01,87600,876.0,Minimum active material mass
+LED Flashlight,1.5,400.0,2.0,800.0,Maximum specific capacity (mAh/kg)
+IoT Sensor / Coin Cell,3.0,0.1,8760,876.0,Minimum mass and volume
